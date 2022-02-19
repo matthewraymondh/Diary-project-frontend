@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "https://diary-mern.netlify.app/" });
+const API = axios.create({
+  baseURL: "https://diary-project-mern.herokuapp.com/",
+});
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem("profile")) {
